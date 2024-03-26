@@ -1,0 +1,836 @@
+*{
+    margin:0;
+    /* left: 0; */
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #A82D49;
+    --heading-color: #43121D;
+    --para-color: #555555;
+    --white-color:white;
+}
+html,body{
+    font-family: "Quicksand", sans-serif;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Quicksand", sans-serif;
+    color: var(--heading-color);
+    font-weight: 600;
+    font-size: 35px;
+}
+p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: var(--para-color);
+    font-size: 16px;
+    line-height:26px;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: white;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--primary-color);  /* creates padding around scroll thumb */
+  }
+
+
+@media screen and (max-width: 570px) and (min-width: 325px){  /* Deafult Mobile Resposnive CSS Starts */
+    
+    h1,h2,h3,h4,h5,h6{
+        font-family: "Quicksand", sans-serif;
+        color: var(--heading-color);
+        font-weight: 600;
+        font-size: 30px;
+    }
+    p{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        color: var(--para-color);
+        font-size: 15px;
+    }
+}       /* Deafult Mobile Resposnive CSS Ends */
+
+
+/***************************************************************************/
+
+/* Header CSS Starts */
+
+.header-section{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-shadow: 1px 3px 10px #c5c5c5;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.Logo{
+    width: 35%;
+    /* padding-left: 20vh; */
+}
+.Logo img{
+    width:auto;
+}
+.menu-toggle {
+    display: none;
+}
+.menu-col{
+    width: 65%;
+    /* padding-top: 60px; Adjust as needed */
+    transition: height 0.3s ease;
+    padding-left: 150px;
+}
+.menu-col.active {
+    display: block;
+    height: 100vh;
+}
+.menu-col nav ul {
+    display: flex;
+    /* flex-direction: column; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-col a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: "Roboto" , sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 15px;
+    letter-spacing: .8px;
+    display: inline;
+}
+.menu-col a:last-child{
+    margin-left: 25px;
+    padding: 10px 15px 10px 15px;
+    background-color: #A82D49;
+    color: white;
+}
+.menu-col a:last-child:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    transition: .4s;
+}
+.menu-close {
+    display: none;
+}
+.close {
+    display: none; /* Hide the close icon by default */
+    cursor: pointer;
+}
+
+
+/* Mobile Resposnive Menu Strats */
+@media screen and (max-width: 575px) and (min-width:320px){
+
+    .menu-col {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px; /* Adjust as needed */
+        box-shadow: 1px 3px 10px #c5c5c5;
+        transition: transform 0.3s ease;
+        padding-left:0;
+    }
+
+    .menu-col.active {
+        display: block;
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .close {
+        display:none;
+        cursor: pointer;
+    }
+
+    .hamburger,
+    .close {
+        font-size: 30px;
+        color: var(--white-color);
+        background-color: #A82D49;
+        padding: 2px 5px;
+    }
+
+    .Logo {
+        width: 70%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .Logo img {
+        width: auto;
+        max-width: 150px;
+        margin-left: -50%;
+    }
+
+    .menu-col nav ul {
+        /* display: flex; */
+        flex-direction: column;
+        list-style-type: none;
+    }
+
+    .menu-col a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 10px 15px;
+        letter-spacing: .8px;
+    }
+
+    .menu-col a:last-child {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .menu-col a:last-child:hover {
+        border: none;
+    }
+}
+/******************************************************************************/
+
+/* Hero Header (first section) style CSS Starts */
+
+.hero-header{
+    background: url(../images/background\ img.jpg) no-repeat center;
+    padding: 250px 150px 200px 150px;
+    width: 100%;
+    display: flex;
+}
+.header-cont{
+    width: 50%;
+}
+.header-cont h1{
+    font-size: 50px;
+    font-weight: 900;
+    padding-bottom:20px;
+}
+.header-cont p{
+    font-weight: 400;
+    padding-bottom: 30px;
+    padding-right: 150px;
+}
+.header-cont .header-button{
+    display: flex;
+    width: 100%;
+}
+.header-button button:first-child{
+    background-color: #A82D49;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 15px;
+    border-radius: 2px;
+}
+.header-button button:first-child i{
+    margin-left: 10px;
+}
+.header-button button:first-child:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    transition: .4s;
+}
+.header-button button:nth-child(2){
+    background-color: white;
+    color:black;
+    font-weight: 600;
+    padding: 15px 30px;
+    font-size: 15px;
+    border-radius: 2px;
+    border: none;
+    transition: .4s;
+    margin-left: 20px;
+    box-shadow: 2px 2px 20px #e2e2e2;
+}
+.header-button button:nth-child(2):hover{
+    background-color: #A82D49;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 16px;
+    border-radius: 2px;
+} 
+
+/* Header section CSS End */
+
+/**************************************************************************************/
+
+/* Counters Section CSS Starts */
+
+.container {
+	max-width:100%;
+	margin: 0 auto;
+	overflow: auto;
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 40px 150px;
+}
+.Counters{
+    width:25%;
+    text-align: center;
+}
+.Counters h6{
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    /* margin-top: -10%; */
+}
+.counter {
+	color: #fff;
+	padding: 20px 20px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.counter .container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 30px;
+	text-align: center;
+}
+
+.counter i {
+	color: lightskyblue;
+	margin-bottom: 5px;
+}
+
+.counter .counter {
+	font-size: 45px;
+	margin: 10px 0;
+}
+
+@media (max-width: 450px) and (min-width: 300px) {
+	.counter .container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.counter .container > div:nth-of-type(1),
+	.counter .container > div:nth-of-type(2) {
+		border-bottom: 1px lightskyblue solid;
+		padding-bottom: 20px;
+	}
+}
+/* Counters Section CSS Ends */
+
+/******************************************************************************/
+
+/* About us content CSS Starts */
+
+.about-us{
+    width: 100%;
+    background-color: white;
+    padding: 100px 150px;
+    display: flex;
+    align-items: center;
+}
+.about-img{
+    width: 50%;
+}
+.about-img img{
+    width: 100%;
+    border-radius: 20px;
+}
+.about-cont{
+    width: 50%;
+    /* text-align: left; */
+    align-items: center;
+    padding-left: 50px;
+}
+.about-cont h1{
+    font-weight: 700;
+    padding: 20px 0;
+}
+.about-cont p{
+    padding-bottom: 20px;
+}
+.about-cont .button-1{
+    background-color: #A82D49;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 15px;
+    border-radius: 2px;
+}
+.about-cont .button-1:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    transition: .4s;
+}
+/* About us content CSS  Ends */
+
+/******************************************************************************/
+
+/* About us section second section starts */
+
+.about-us-section-2{
+    width: 100%;
+    background-color: white;
+    padding: 100px 150px;
+    display: flex;
+    align-items: center;
+}
+.about-cont-2{
+    width: 50%;
+    /* text-align: left; */
+    align-items: center;
+    padding-right: 50px;
+}
+.about-cont-2 p{
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+.about-img-2{
+    width: 50%;
+}
+.about-img-2 img{
+    width: 100%;
+    border-radius: 20px;
+}
+.about-list{
+    padding-bottom: 20px;
+}
+.about-list li{
+    list-style: none;
+}
+.about-list i{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 900;
+    padding-top: 15px;
+}
+.about-cont-2 h1{
+    padding-bottom: 20px;
+} 
+.about-cont-2 .button-1{
+    background-color: #A82D49;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 15px;
+    border-radius: 2px;
+}
+.about-cont-2 .button-1:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    transition: .4s;
+}
+/* About us second section Ends  */
+
+/* Call to action section CSS Starts */
+
+.call-to-action{
+    background: url("../images/video\ section.jpg");
+    padding: 70px 250px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.call-to-action h1{
+    color: var(--primary-color);
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+.call-to-action p{
+    font-weight: 400;
+    font-size: 16px;
+    padding: 20px 150px;
+}
+.call-to-action li{
+    list-style: none;
+    font-weight: 600;
+    font-family: "Roboto",sans-serif;
+}
+/* Call to action section CSS Ends */
+
+/************************************************************************/
+
+/* food section css strats from here */
+.food-section-header{
+    padding: 100px 150px 0 150px ;
+    text-align: center;
+}
+.food-section-header h1{
+    padding-bottom: 20px;
+}
+.food-section-header p{
+    padding: 10px 250px;
+}
+.food-sec-container{   /* food section food list css */
+    width: 100%;
+    display: flex;
+    padding: 50px 150px 100px 150px;
+}
+.food-section-cont{
+    width: 33%;
+    text-align: left;
+    padding: 30px;
+}
+.food-section-cont img{
+    width: 100%;
+    border-radius: 10px;
+}
+.food-section-cont h5{
+    font-size: 18px;
+    color: #43121D;
+    font-weight: 700;
+    padding-top: 10px;
+}
+.food-section-cont h5 span{
+    color: #868686;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .9px;
+}
+.food-section-cont h3{
+    font-size: 28px;
+    color:var(--primary-color);
+    padding: 20px 0;
+}
+.food-section-cont h3 span{
+    color: #868686;
+    text-decoration: line-through;
+}
+.food-section-cont hr{
+   border-top: .5px solid #e2e2e2;   
+}
+.food-section-cont .order-button{
+    background-color: #A82D49;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 15px;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+.food-section-cont .order-button:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    transition: .4s;
+}
+
+/***************************************************************************/
+
+/* Testimonial Slider Starts */
+.testimonial-slider-section{
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 100px 150px;
+}
+.testi-header h1{
+    color: white;
+}
+.testimonial-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px;
+}
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.testimonial-slide {
+    flex: 0 0 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px 250px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.testimonial-slide img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.testimonial-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #B9576D;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.active-dot {
+    background-color:white;
+}
+.testimonial-slide .testimonial-content{
+    font-size: 19px;
+    font-weight: 400;
+    padding-top: 30px;
+}
+.testimonial-slide .testimonial-place{
+    font-size: 18px;
+    padding-top: 30px;
+    color: #A82D49;
+}
+
+/**************************************************************************/
+
+/* FAQ Main section CSS Starts from here */
+
+.FaQ-header-section{
+    padding-top: 100px;
+    text-align: center;
+}
+.FaQ-header-section h1{
+    color: #43121D;
+    font-weight: 700;
+}
+.faq-main-sec{
+    width: 100%;
+    background-color: white;
+    padding: 50px 130px;
+    display: flex;
+}
+.faq-col{
+    width: 50%;
+    text-align: left;
+    display: flexbox; /* Optional for better alignment */
+    height: 100%;
+
+}
+.faq-cont{
+    padding: 30px;
+    width: 100%;
+    display: block; /* Optional for better alignment */
+    height: 100%;
+}
+.faq-cont h6 span{
+     color: red;
+     font-size: 30px;
+}
+.faq-cont h6{
+    font-size: 20px;
+}
+.faq-cont p{
+    line-height: 30px;
+    font-weight: 400;
+    padding-top: 15px;
+}
+/************************************************************************/
+
+/* Call to second section starts */
+
+/* .overlay{
+    background: #151515;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+} */
+.call-to-section-2{
+    /* background: url("../images/call2action\ bg.jpg") no-repeat center fixed;
+    padding: 70px 150px;
+    background-position: 0px 52.365px;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+} */ position: relative; /* Establish a stacking context */
+     padding: 70px 150px; /* Add some padding for content */
+     color: white; /* Set text color to white */
+     text-align: center;
+     display: flex;
+     align-items: center;
+     background-color: rgba(0, 0, 0, 0.285);
+     opacity: 1;
+}
+.call-to-section-2::after{
+  content: ""; /* Add a pseudo-element for background */
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Span the full width and height */
+  height: 100%;
+  background-image: url("../images/call2action\ bg.jpg"); /* Replace with your image path */
+  background-size: cover; /* Resize image to cover the container */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  opacity: 1; /* Set opacity to 50% */
+  z-index: -1; /* Place background behind text content */
+}
+.call-to-section-2 .learn-more{
+    background-color: #A82D49;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 15px;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+.call-to-section-2 .learn-more:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    transition: .4s;
+}
+.call-to-section-2 h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+/********************************************************/
+
+/* Subscription form CSS Starts from here */
+
+.Subscription{
+    width: 100%;
+    background-color: white;
+    padding: 100px 150px;
+    text-align: center;
+}
+.Subscription .Subscription-form{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    align-items: center;
+    gap: 30px;
+}
+.Subscription h1{
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.Subscription p{
+    font-weight: 500;
+    padding: 0px 100px;
+}
+.Subscription-form input[type="text"]{ 
+    padding: 15px 30px;
+    border: 2px solid #868686;
+}
+.Subscription-form input{
+    color: black;
+    font-size: 15px;
+    border: none;
+    outline: none; 
+}
+.Subscription-form ::placeholder{
+    font-size: 16px;
+    font-weight: 400;
+}
+.Subscription-form input[type="button"]{
+    background-color: #A82D49;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 15px;
+    border-radius: 2px;
+}
+.Subscription-form input[type="button"]:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    transition: .4s;
+}
+
+/********************************************************************/
+
+/* Footer section CSS Starts from here */
+
+footer{
+    background-color: var(--primary-color);
+    padding: 100px 200px;
+    color: white;
+    display: block;
+    text-align: center;
+}
+.links-footer{
+    position: relative;
+    height: 1px;
+    /* display: flex; */
+    text-align: center;
+}
+.links-footer li{
+    list-style: none;
+    padding-right: 40px;
+    display: inline;
+}
+.links-footer a{
+    color: white;
+    text-decoration: none;
+}
+.links-footer a:hover{
+    text-decoration: underline;
+    transition: .3s;
+}
+.footer-social{
+    font-size: 23px;
+    margin-top: 50px;
+}
+.footer-social i{
+    padding-right: 5px;
+}
+.copyright h6{
+    font-size: 15px;
+    margin-top: 30px;
+    color: white;
+}
+/**** Animated CSS Starts from here *****/
+
+/** Scroll to top */
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 20px;
+    padding:10px;
+    background-color:var(--primary-color);
+    /* color: white; */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    align-items: center;
+  }
+  #scrollToTopBtn i{
+    color: white;
+  }
+  #scrollToTopBtn i:hover{
+    color: white;
+  }

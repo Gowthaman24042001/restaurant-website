@@ -1,0 +1,305 @@
+/* Hero Header (first section) style CSS Starts */
+@media screen and (min-width: 300px) and (max-width: 450px){
+.hero-header{
+    width: 100%;
+    padding: 200px 20px 150px 20px;
+    width: 100%;
+    display: flex;
+}
+.header-cont{
+    width: 100%;
+}
+.header-cont h1{
+    font-size: 35px;
+    font-weight: 900;
+    padding-bottom:20px;
+}
+.header-cont p{
+    font-weight: 400;
+    padding-bottom: 30px;
+    font-size: 16px;
+    padding-right: 0;
+}
+.header-cont .header-button{
+    display: flex;
+    width: 100%;
+}
+.header-button button:first-child{
+    padding: 15px 19px;
+}
+.header-button button:first-child i{
+    margin-left: 10px;
+}
+.header-button button:first-child:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    transition: .4s;
+}
+.header-button button:nth-child(2){
+    padding: 15px 19px;
+}
+.header-button button:nth-child(2):hover{
+    padding: 15px 19px;
+} 
+
+/**************************************************************************************/
+
+/* Counters Section CSS Starts */
+
+.container {
+	max-width:100%;
+    display: block;
+    background-color: var(--primary-color);
+    padding: 40px;
+    text-align: center;
+}
+.Counters{
+    width:100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/******************************************************************************/
+
+/* About us content CSS Starts */
+
+.about-us{
+    width: 100%;
+    padding: 100px 20px;
+    display: block;
+}
+.about-img{
+    width: 100%;
+}
+.about-cont{
+    width: 100%;
+    /* text-align: left; */
+    align-items: center;
+    padding-left: 0;
+}
+.about-cont h1{
+    font-weight: 700;
+    padding: 20px 0;
+}
+.about-cont p{
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+/* About us content CSS  Ends */
+
+/******************************************************************************/
+
+/* About us section second section starts */
+
+.about-us-section-2{
+    width: 100%;
+    padding: 70px 20px;
+    display: block;
+
+}
+.about-cont-2{
+    width: 100%;
+    /* text-align: left; */
+    align-items: center;
+}
+.about-cont-2 p{
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    padding-right: 0;
+}
+.about-img-2{
+    width: 100%;
+}
+.about-img-2 img{
+    width: 100%;;
+}
+.about-list{
+    padding-bottom: 30px;
+}
+.about-list li{
+    list-style: none;
+}
+.about-list i{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 900;
+    padding-top: 15px;
+}
+.about-cont-2 h1{
+    padding-bottom: 20px;
+} 
+/* About us second section Ends  */
+
+/*******************************************************************/
+
+/* Call to action section CSS Starts */
+
+.call-to-action{
+    padding: 70px 20px;
+    background-position: center;
+}
+.call-to-action h1{
+    font-size: 35px;
+}
+.call-to-action p{
+    font-weight: 400;
+    font-size: 16px;
+    padding: 20px 20px;
+}
+/* Call to action section CSS Ends */
+
+/********************************************************************/
+
+.food-section-header{
+    padding: 70px 20px 0 20px ;
+    text-align: center;
+    background-color:white;
+}
+.food-section-header h1{
+    padding-bottom: 20px;
+}
+.food-section-header p{
+    padding: 10px 20px;
+}
+.food-sec-container{   /* food section food list css */
+    width: 100%;
+    display: block;
+    padding: 50px 20px 70px 20px;
+    background-color: white;
+}
+.food-section-cont{
+    width: 100%;
+    padding: 20px;
+}
+.food-section-cont h5{
+    font-size: 19px;
+}
+.food-section-cont h5 span{
+    padding-top: 15px;
+}
+
+/***************************************************************************/
+
+/* Testimonial Slider Starts */
+
+.testimonial-slider-section{
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 60px 20px;
+}
+.testi-header h1{
+    color: white;
+}
+.testimonial-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+    margin-top: 30px;
+}
+.testimonial-slide {
+    width:100%;
+    padding: 50px 20px;
+    flex: 0 0 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/**************************************************************************/
+
+/* FAQ Main section CSS Starts from here */
+
+.FaQ-header-section{
+    padding: 70px 0;
+    text-align: center;
+    background-color: white;
+}
+.faq-main-sec{
+    width: 100%;
+    padding: 20px 20px 50px 20px;
+    display:block;
+}
+.faq-col{
+    width: 100%;
+}
+.faq-cont{
+    padding: 20px;
+}
+.faq-cont h6 span{
+     color: red;
+     font-size: 30px;
+}
+.faq-cont h6{
+    font-size: 23px;
+}
+.faq-cont p{
+    font-size: 16px;
+}
+/************************************************************************/
+/** Call to action section css start*/
+
+.call-to-section-2{
+     padding: 70px 20px; /* Add some padding for content */
+     color: white; /* Set text color to white */
+     display: block;
+     align-items: center;
+     background-color: rgba(0, 0, 0, 0.285);
+     opacity: 1;
+}
+.call-to-section-2 .learn-more{
+    margin-left: 0;
+}
+
+/*****************************************************************/
+
+/* Subscription form CSS Starts from here */
+
+.Subscription{
+    width: 100%;
+    background-color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+.Subscription .Subscription-form{
+    display: block;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    align-items: center;
+    gap: 30px;
+}
+.Subscription p{
+    font-weight: 400;
+    padding: 0px 20px;
+    font-size: 16px;
+}
+.Subscription-form input[type="text"]{ 
+    padding: 15px 30px;
+    border: 2px solid #868686;
+    width: 100%;
+}
+.Subscription-form input[type="button"]{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/********************************************************************/
+
+footer{
+    padding: 70px 20px;
+}
+.links-footer{
+    position: relative;
+    height: 1px;
+    /* display: flex; */
+    text-align: center;
+}
+.links-footer li{
+    list-style: none;
+    padding-right: 20px;
+    display: inline;
+}
+}
